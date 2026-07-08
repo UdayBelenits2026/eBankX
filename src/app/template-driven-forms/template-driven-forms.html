@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+
+    <div class="container">
+        <pre> value: {{userForm.value | json}}</pre>
+        <pre>valid: {{userForm.valid}}</pre>
+        <pre>Invalid:{{userForm.invalid}}</pre>
+        <pre>untouched:{{userForm.untouched}}</pre>
+        <pre>tocuhed:{{userForm.touched}}</pre>
+        <pre>submitted:{{userForm.submitted}}</pre>
+
+        <form  #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" >
+            <h1>User Registration</h1>
+            <label for="firstname">First Name</label>
+            <input type="text" placeholder="Enter your first name" name="firstname" [(ngModel)]="userObject.firstname">
+
+            <label for="lastname">Last Name</label>
+            <input type="text" placeholder="Enter your last name" name="lastname" [(ngModel)]="userObject.lastname">
+
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter your email" name="email" [(ngModel)]="userObject.email">
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter your password" name="password" [(ngModel)]="userObject.password">
+
+            <div class="checkbox">
+                <input type="checkbox" name="check" name="ischecked" [(ngModel)]="userObject.ischecked">
+                <label for="check">I agree to the terms and conditions</label>
+            </div>
+
+            <input type="submit" value="Register" >
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div>
+    <h1>Image JSon Data</h1>
+
+    <div >
+        @for (image of api_data; track image.id) {
+            <div>
+                <ul>
+                    <li>{{image.albumId}}</li>
+                    <li>{{image.id}}</li>
+                    <li>{{image.title}}</li>
+                    <li>{{image.url}}</li>
+                    <li>{{image.thumbnailUrl}}</li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>

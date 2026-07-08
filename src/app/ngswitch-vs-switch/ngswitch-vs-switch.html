@@ -1,0 +1,91 @@
+<div class="row text-center">
+    <div class="col-12 m-3">
+        <b>Example of *ngSwitch vs switch() </b>
+    </div>
+</div>
+<!-- <div class="row text-center">
+    <div class="col-4">
+        <div>
+            <button class="btn btn-primary m-3" (click)="set(1)">1st Grade</button>
+            <button class="btn btn-success m-3" (click)="set(2)">1st Grade</button>
+            <button class="btn btn-danger m-3"  (click)="set(3)">1st Grade</button>
+        </div>  
+         <div [ngSwitch]="grade">
+            <div *ngSwitchCase="1">Congrats on you achivement-1st Grade</div>
+            <div *ngSwitchCase="2">Doing well and improve more- 2nd grade </div>
+            <div *ngSwitchCase="3">Doing good and improve  more-3rd grade</div>
+            <div *ngSwitchDefault>No result found....</div>
+        </div>     
+       </div>
+    </div> -->
+<div>
+    <select [(ngModel)]="orderStatus">
+        <option value="">Select Status</option>
+        <option value="OrderPlaced">Order Placed</option>
+        <option value="Preparing">Preparing</option>
+        <option value="OutforDelivery">Out of Delivery</option>
+        <option value="Delivered">Delivered</option>
+        <option value="Cancelled">Cancelled</option>
+    </select>
+    <!-- <div [ngSwitch]="orderStatus" class="status-card">
+        <div *ngSwitchCase="'OrderPlaced'">
+            <h2>📦 Order Placed</h2>
+            <p>Your order has been successfully placed.</p>
+            <p><strong>Estimated Time:</strong> 30-40 Minutes</p>
+        </div>
+        <div *ngSwitchCase="'Preparing'">
+            <h3>👨‍🍳 Preparing</h3>
+            <p>The restaurant is preparing your food.</p>
+            <p><strong>Estimated Time:</strong> 20-25 Minutes</p>
+        </div>
+        <div *ngSwitch="'OutforDelivery'">
+            <h3>🛵 Out for Delivery</h3>
+            <p>Your order is on the way.</p>
+            <p><strong>Estimated Time:</strong> 10-15 Minutes</p>
+        </div>
+        <div *ngSwitchCase="'Delivered'">
+            <h3>✅ Delivered</h3>
+            <p>Your order has been delivered successfully.</p>
+        </div>
+        <div *ngSwitchCase="'Cancelled'">
+            <h3>❌ Cancelled</h3>
+            <p>Your order has been cancelled.</p>
+        </div>
+        <div *ngSwitchDefault>
+            <h3>ℹ️ Welcome</h3>
+            <p>Please select an order status to view details.</p>
+        </div>
+    </div> -->
+    <div>
+        @switch (orderStatus) {
+        @case ('OrderPlaced') {
+        <h2>📦 Order Placed</h2>
+        <p>Your order has been successfully placed.</p>
+        <p><strong>Estimated Time:</strong> 30-40 Minutes</p>
+        }
+        @case ('Preparing') {
+        <h3>👨‍🍳 Preparing</h3>
+        <p>The restaurant is preparing your food.</p>
+        <p><strong>Estimated Time:</strong> 20-25 Minutes</p>
+        }
+        @case ('OutforDelivery') {
+        <h3>🛵 Out for Delivery</h3>
+        <p>Your order is on the way.</p>
+        <p><strong>Estimated Time:</strong> 10-15 Minutes</p>
+        }
+        @case ('Delivered') {
+        <h3>✅ Delivered</h3>
+        <p>Your order has been delivered successfully.</p>
+        }
+        @case ('Cancelled') {
+        <h3>❌ Cancelled</h3>
+        <p>Your order has been cancelled.</p>
+        }
+        @default {
+        <h3>ℹ️ Welcome</h3>
+        <p>Please select an order status to view details.</p>
+        }
+        }
+
+    </div>
+</div>

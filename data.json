@@ -1,0 +1,28 @@
+{
+    "users":[
+        {
+            "id":1,
+            "name":"UdayKiran",
+            "username":"Udayk2122",
+            "email":"uday@gmail.com"
+        },
+        {
+            "id":2,
+            "name":"Akshay Kumar",
+            "username":"Akshay233",
+            "email":"akshay@gmail.com"
+        },
+        {
+            "id":3,
+            "name":"Dinesh",
+            "username":"dinesh212",
+            "email":"dinesh@gmail.com"
+        },
+        {
+            "id":4,
+            "name":"Pavan",
+            "username":"pavan234",
+            "email":"pavan@gmail.com"
+        }
+    ]
+}

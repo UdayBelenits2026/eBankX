@@ -1,0 +1,43 @@
+.main-cont{
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 20px 20px 20px 20px ;
+    background:linear-gradient(to bottom, green, white, orange);
+}
+#sub-cont{
+ background:linear-gradient(to right, black, rgb(210, 109, 228), yellow)
+}
+.paras{
+    color: aliceblue;
+}
+.main-cont:hover{
+    box-shadow: inset 0px 10px 10px rgb(215, 10, 10);
+}
+img{
+    margin-top: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid burlywood;
+    
+}
+button{
+    height: 30px;
+    width: 60px;
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px ;
+}
+button:hover{
+    background-color: bisque;
+}
+#ng-div{
+    height: 200px;
+    width: 200px;
+    border: 20px solid blueviolet;
+}
+#super-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

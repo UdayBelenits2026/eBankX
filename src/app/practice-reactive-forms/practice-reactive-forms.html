@@ -1,0 +1,53 @@
+    <div class="container">
+        <h2>New Role Registration</h2>
+
+        <form [formGroup]="ReactiveForm">
+            <label for="roleId">Role ID</label>
+            <input type="text" id="roleId" placeholder="Enter Role ID" formControlName="roleId">
+        @if((ReactiveForm.controls['roleId']?.dirty || (ReactiveForm.controls["roleId"]?.touched))){
+            @if(ReactiveForm.controls['roleId']?.errors?.['required']){
+                <small style="color: brown;">RoleId is required..</small>
+            }
+            @if(ReactiveForm.controls['roleId']?.errors?.['maxlength']){
+                <small>Max length is 3...</small>
+            }
+        }
+            <label for="roleName">Role Name</label>
+            <input type="text" id="roleName" placeholder="Enter Role Name" formControlName="rolename">
+            @if((ReactiveForm.controls['rolename']?.dirty || (ReactiveForm.controls['rolename']?.touched))){
+                @if(ReactiveForm.controls['rolename']?.errors?.['pattern']){
+                    <small>These characters are allowed "^[a-zA-Z]+$"</small>
+                }
+            }
+
+            <label for="department">Department</label>
+            <input type="text" id="department" placeholder="Enter Department" formControlName="depart">
+             @if((ReactiveForm.controls['depart']?.dirty || (ReactiveForm.controls["depart"]?.touched))){
+            @if(ReactiveForm.controls['roleId']?.errors?.['maxlength']){
+                <small>Max length is 3...</small>
+            }
+        }
+            <label for="description">Role Description</label>
+            <input type="text" id="description" placeholder="Enter Role Description" formControlName="roledesc">
+
+            <label for="manager">Reporting Manager</label>
+            <input type="text" id="manager" placeholder="Enter Manager Name" formControlName="manager">
+            <div formGroupName="address">
+                <label for="location" >Address</label>
+            <label for="city">city</label>
+             <input type="text" id="city" placeholder="Enter city Name" formControlName="city">
+             
+            <label for="state">State</label>
+            <input type="text" id="state" placeholder="Enter State Name" formControlName="state">
+            <label for="pincode">pincode </label>
+            <input type="number" id="pincode " placeholder="Enter pincode " formControlName="pincode">
+            </div>
+
+            <button type="submit" (click)="OnSubmit()" [disabled]="ReactiveForm.invalid">Register Role</button>
+            <!-- <button type="submit" (click)="SetValues()" >set values</button>
+            <button type="submit" (click)="ResetValues()" >reset values</button> -->
+
+            
+
+        </form>
+    </div>

@@ -1,0 +1,24 @@
+<div class="container">
+        <h2>Registration Form</h2>
+
+        <form [formGroup]="ReactiveForm" >
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Enter First Name" formControlName="firstname" >
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Enter Last Name" formControlName="lastName">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter Email" formControlName="Email">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" formControlName="password">
+
+            <div class="checkbox">
+                <input type="checkbox" id="terms" formControlName="isChecked">
+                <label for="terms">I agree to the Terms & Conditions</label>
+            </div>
+
+            <button type="submit" (click)="OnSubmit()">Submit</button>
+        </form>
+    </div>

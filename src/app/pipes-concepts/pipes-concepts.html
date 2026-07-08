@@ -1,0 +1,42 @@
+<div class="m-3">
+    <h6>Mobile Number: {{MobileNumber | custompipes}}</h6>
+    <h4>customDatepipe: {{currentDate | custompipes}}</h4>
+    <h4>PurePipe:square of 5 is {{5 | purepipe}}</h4>
+    <h1>ImpurePipe: {{currentDate| impurePipe}}</h1>
+
+    <!-- <h3 class="text-primary m-3">String Type Pipes..</h3>
+    <h4>AngularPipes:uppercase {{AngularPipes | uppercase}}</h4>
+    <h4>AngularPipes:lowercase {{AngularPipes | lowercase}}</h4>
+    <h4>AngularPipes:titlecase {{AngularPipes | titlecase}}</h4>
+    <h4>AngularPipes:slice(start index:end index) {{AngularPipes | slice:4:8}}</h4>
+    <h4>AngularPipes:slice(start index:end index) {{AngularPipes | slice:-10}}</h4>
+    <h4>AngularPipes:slice(start index:end index) {{AngularPipes | slice:1:6}}</h4>
+    <h4>AngularPipes:slice(start index:end index) {{AngularPipes | slice:6}}</h4>
+    <h4>JsonPipe: {{customer | json}}</h4>
+    <pre>JsonPipe: {{customer | json}}</pre> -->
+
+<!-- 
+    <h3 class="text-primary m-3">Number Type Pipes..</h3>
+    <h4>Datepipe: {{currentDate}}</h4>
+    <h4>Datepipe: {{currentDate | date}}</h4>
+    <h4>shortpipe: {{currentDate | date: 'short'}}</h4>
+    <h4>shortTimepipe: {{currentDate | date: 'shortTime'}}</h4>
+    <h4>shortDatepipe: {{currentDate | date: 'shortDate'}}</h4>
+    <h4>mediumpipe: {{currentDate | date: 'medium'}}</h4>
+    <h4>mediumDatepipe: {{currentDate | date: 'mediumDate'}}</h4>
+    <h4>mediumTimepipe: {{currentDate | date: 'mediumTime'}}</h4>
+    <h4>Decimalpipe: {{3.145297 | number:"1.2"}}</h4>
+    <h4>Percentpipe: {{0.23 | percent}}</h4>
+    <h4>currencypipe: {{344 | currency:'INR'}}</h4>
+    <h4>currencypipe: {{233 | currency:'EUR'}}</h4>
+    <h4>Datepipe: {{currentDate | date |uppercase}}</h4> -->
+
+
+    <h3 class="text-primary m-3">AsyncPipes..</h3>
+    <h4>AsyncPipe:</h4>
+    <ol>
+        @for (item of fruits |async; track item) {
+            <li>{{item}}</li>
+        }
+    </ol>
+</div>

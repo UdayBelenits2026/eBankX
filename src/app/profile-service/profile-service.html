@@ -1,0 +1,35 @@
+<div>
+    @if (isEligible) {
+        <h4 class="text-success">You are eligible for the premium subscription..</h4>
+    }@else {
+        <h4 class="text-danger">You are not eligible for the premium subscription..</h4>
+    }
+    <h1>User Details</h1>
+    <ul>
+        <li>{{ dummydata.id }}</li>
+        <li>{{ dummydata.name }}</li>
+        <li>{{ dummydata.Username }}</li>
+        <li>{{ dummydata.email }}</li>
+    </ul>
+
+    <h1>..............................API data..........................................</h1>
+  <div class="main">
+      @for ( data of api_data; track data.id) {
+    <div  class="api_content">
+       <ul>
+         <li>{{ data.id }}</li>
+        <li>{{ data.name }}</li>
+        <li>{{ data.username }}</li>
+        <li>{{ data.email }}</li>
+        <li>{{ data.address.street }}</li>
+        <li>{{ data.address.suite }}</li>
+        <li>{{ data.address.city }}</li>
+       </ul>
+    </div>
+
+        
+
+    }
+  </div>
+
+</div>

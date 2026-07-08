@@ -1,0 +1,47 @@
+<div class="row text-center">
+    <div class="col-12 m-3">
+        <b>Example of *ngIf vs if() </b>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-4">
+       <div>
+         <input type="checkbox" (click)="onClick()"> Terms and Conditions.
+       </div>
+    </div>
+    <!-- <div *ngIf="isChecked" >
+        <button class="btn btn-success" *ngIf="isChecked" >Submit</button>
+    </div> -->
+    @if (isChecked) {
+        <button class="btn btn-success w-3" >Submit</button>
+
+    }
+    <div class="col-4">
+       @if (isInput) {
+         <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvBxNXSExjnI2N3r6tTjJB32UjJP2V9YFGmN_HL863w&s=10" alt="" >
+        </div>
+       }
+        <button class="btn btn-primary m-2 " (click)="showField()">show</button>
+        <button class="btn btn-danger m-2" (click)="hideField()">hide</button>
+    </div>
+    <div class="col-4">
+        <div>
+            <input type="text" class="m-1" placeholder="hello" [(ngModel)]="input1">
+            <input type="text" class="m-1" placeholder="hello 2" [(ngModel)]="input2">
+        </div>
+        <!-- <div *ngIf="input1!==input2">
+            <h4>Both values are not equal.</h4>
+        </div>
+        <div *ngIf="input1==input2">
+              <h4>Both values are equal.</h4>
+        </div> -->
+        @if (input1 !==input2) {
+             <h4>Both values are not equal.</h4>
+        }
+        @else if (input1=== input2) {
+             <h4>Both values are equal.</h4>
+        }
+    </div>
+</div>
+<app-nfor-directive-for></app-nfor-directive-for>

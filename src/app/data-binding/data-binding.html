@@ -1,0 +1,35 @@
+<div id="super-div">
+    <div class="main-cont">
+    <h1>Angular (One Way Data Binding)</h1>
+    <div id="sub-cont">
+        <p class="paras">Interpoliation</p>
+        <p class="paras">{{topic}} and {{name}}</p>
+    </div>
+</div>
+<div>
+    <h1>Property Binding.</h1>
+    <img [src]="image" alt="">
+</div>
+
+<div>
+    <h1>Event Binding.</h1>
+    <button (click)="onSave()">Save</button>
+</div>
+<select (change)="onChange()" style="height: 50px; width: 110px;">
+    <option value="India">India</option>
+    <option value="Germany">Germany</option>
+    <option value="France">France</option>
+    <option value="Spain">Spain</option>
+</select>
+<div id="ng-div">
+    <label for="text"> Two way Binding [(ngModel)]</label>
+    <input type="text" [(ngModel)]="name"  style="background-color: aquamarine; border: 3px solid salmon;">
+    {{name}}
+</div>
+
+
+<div>
+    <a routerLink="structure-div">continue with structural derivative </a>
+</div>
+</div>
+<router-outlet></router-outlet>
